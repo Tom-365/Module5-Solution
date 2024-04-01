@@ -155,9 +155,10 @@ dc.loadMenuCategories = function () {
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl + categoryShort + ".json",
+    menuItemsUrl + categoryShort,
     buildAndShowMenuItemsHTML);
 };
+
 
 
 // Builds HTML for the categories page based on the data
@@ -213,7 +214,6 @@ function buildCategoriesViewHtml(categories,
   finalHtml += "</section>";
   return finalHtml;
 }
-
 
 
 // Builds HTML for the single category page based on the data
@@ -339,7 +339,6 @@ function insertItemPortionName(html,
   html = insertProperty(html, portionPropName, portionValue);
   return html;
 }
-
 
 global.$dc = dc;
 
