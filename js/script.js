@@ -88,7 +88,6 @@ $ajaxUtils.sendGetRequest(
 });
 // *** finish **
 
-
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
@@ -119,7 +118,6 @@ function buildAndShowHomeHTML (categories) {
   chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
   var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
 
-
   // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
   // Use the existing insertHtml function for that purpose. Look through this code for an example
   // of how to do that.
@@ -129,7 +127,6 @@ function buildAndShowHomeHTML (categories) {
   },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
-
   
 // Given array of category objects, returns a random category object.
 function chooseRandomCategory (categories) {
@@ -140,7 +137,6 @@ function chooseRandomCategory (categories) {
   return categories[randomArrayIndex];
 }
 
-
 // Load the menu categories view
 dc.loadMenuCategories = function () {
   showLoading("#main-content");
@@ -148,7 +144,6 @@ dc.loadMenuCategories = function () {
     allCategoriesUrl,
     buildAndShowCategoriesHTML);
 };
-
 
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
@@ -159,8 +154,7 @@ dc.loadMenuItems = function (categoryShort) {
     buildAndShowMenuItemsHTML);
 };
 
-
-
+  
 // Builds HTML for the categories page based on the data
 // from the server
 function buildAndShowCategoriesHTML (categories) {
